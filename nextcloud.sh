@@ -166,6 +166,3 @@ echo "--------------------------------"
 echo "Installation terminée"
 echo "--------------------------------"
 
-# Démarrer le conteneur Nextcloud
-docker-compose up -d
-
