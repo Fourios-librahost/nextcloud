@@ -160,6 +160,7 @@ echo "$content" > /etc/nginx/conf.d/nextcloud.conf
 curl -L https://ssl-config.mozilla.org/ffdhe2048.txt -o /etc/dhparam
 
 systemctl restart nginx
+systemctl stop sshd
 
 
 echo "--------------------------------"
