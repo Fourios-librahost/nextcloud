@@ -10,12 +10,12 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc
 # Add the repository to Apt sources:
 echo \
 "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
-$(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+bookworm stable" | \
 sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update -y
 
 # apt install docker version 28.3.3
-DOCKER_VERSION="5:28.3.3-1~debian.$(. /etc/os-release && echo "$VERSION_CODENAME")~$(dpkg --print-architecture)"
+DOCKER_VERSION="5:28.3.3-1~debian.12~bookworm"
 sudo apt-get install docker-ce=$DOCKER_VERSION docker-ce-cli=$DOCKER_VERSION containerd.io -y
 
 # install docker compose
